@@ -5,11 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV ANHQV</title>
+
+    <!-- Hoja de estilo externa -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class= "nombre">
     <h1>Emilio Delgado</h1>
-        <img src="cv.jpg" alt="foto perfil" width = '150'>
-
+    </div>
+    <img src="cv.jpg" alt="foto perfil" width = '300'>
+    <div id = perfil> <!-- Descripción personal -->
+        <h3>Perfil</h3>
+        <p>Portero de esta nuestra comunidad, experto en el uso de la vaporeta y asiduo a utilizar el cuarto de los contadores.
+             En una ocasión fingí mi propia muerte.
+             Actualmente recorriendo Europa en una autocaravana con Paquito.</p>
+        
+    </div>
      <!-- Division por bloques   --> 
     <div id= datos> 
         <h3>Datos personales</h3>
@@ -28,6 +39,7 @@
             <li><img src="website.jpg" alt="linkedIn" width = '20'>      
             <a href="https://www.linkedin.com/login/es">LinkedIn</a></li>
         </ul>
+    </div>
     <div id = habilidades> <!-- Descripcion de habilidades, faltan barras  -->
         <h3>Habilidades</h3>
         <ul>
@@ -39,19 +51,28 @@
 
     </div>
     <div id = idiomas>
-        <h3>idiomas</h3> <!-- Definicion del nivel de idiomas, falta barras -->
+        <h3>Idiomas</h3> <!-- Definicion del nivel de idiomas, falta barras -->
         <ul>
-            <li><img src="espana.jpg" width="20"/> Español</li>
-            <li><img src="inglaterra.svg" width="20"/> Inglés</li>
-            <li><img src="francia.jpg" width="20"/> Francés</li>
+            <li>
+                <img src="espana.jpg" width="20"/> Español
+                <img src="high.png" alt="high" width="80">
+            </li>
+            <li>
+                <img src="inglaterra.svg" width="20"/> Inglés
+                <img src="medium.png" alt="medium" width="80">
+            </li>
+            <li><img src="francia.jpg" width="20"/> Francés
+                <img src="medium.png" alt="medium" width="80">
+            </li>
         </ul>
     </div>
-    <div id = perfil> <!-- Descripción personal -->
-        <h3>Perfil</h3>
-        <p>Portero de esta nuestra comunidad, experto en el uso de la vaporeta y asiduo a utilizar el cuarto de los contadores.</p>
-        <p>En una ocasión fingí mi propia muerte.</p>
-        <p>Actualmente recorriendo Europa en una autocaravana con Paquito.</p>
+    <div id= "highlights"> 
+        <h3>Mejores momentos</h3>
+        <a href="https://www.youtube.com/watch?v=XCCrtlXx3nY">
+            <button>!Pulsa aqui para verme en acción!</button>
+        </a>  
     </div>
+    
     <div id = estudios> <!-- Definicion de bloque de estudios academicos -->
         <h3>Estudios Académicos</h3>
         <ul>
@@ -62,6 +83,7 @@
                 <li>Matemáticas y competencias básicas en ciencia y tecnología.</li>
                 <li>Sociales y cívicas.</li>
                 <li>Conciencia y expresiones culturales.</li>
+                <p></p>
             </ol>
             <li>1970-1983: Graduado escolar - Colegio María auxiliadora</li>
             
@@ -78,12 +100,7 @@
             
         </ul>
     </div>
-    <div> <!-- Enlace a mejores momentos -->
-        <h3>Mejores momentos</h3>
-        <a href="https://www.youtube.com/watch?v=XCCrtlXx3nY">
-            <button>!Pulsa aqui para verme en acción!</button>
-        </a>  
-    </div>
+    
     
 </body>
 </html>

@@ -1,0 +1,103 @@
+body {
+    background-image: url("fondo.jpg");
+  
+}
+
+.nombre{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow:4px 4px grey;
+    font-size: 22px;
+   
+    margin: 10px;
+    border: solid rgb(146, 146, 46);
+    background-color: rgba(199, 199, 28, 0.8);
+}
+
+#datos{
+    text-align: left;
+    border: solid rgb(150, 42, 42);
+    background-color: rgba(207, 139, 38, 0.8);
+    margin: 15px;
+    margin-right: 1350px ;
+    font-size: 20px;
+    padding: 20px;
+}
+
+#habilidades{
+    text-align: left;
+    border: solid rgb(150, 42, 42);
+    background-color: rgb(196, 131, 35, 0.8);
+    margin: 15px;
+    margin-right: 1350px ;
+    font-size: 20px;
+    padding: 20px;
+}
+
+#idiomas{
+    text-align: left;
+    border: solid rgb(150, 42, 42);
+    background-color: rgb(196, 131, 35, 0.8);
+    margin: 15px;
+    margin-right: 1350px ;
+    font-size: 20px;
+    padding: 20px;;
+}
+#highlights{
+    text-align: left;
+    border: solid rgb(150, 42, 42);
+    background-color: rgb(196, 131, 35, 0.8);
+    margin: 15px;
+    padding: 10px;
+    margin-right: 1350px ;
+    font-size: 20px;
+    padding: 20px;
+
+}
+#perfil{
+    text-align: center;
+    border: solid rgb(150, 42, 42);
+    background-color: rgb(196, 131, 35, 0.8);
+    font-size: 20px;
+    margin-right:200px ;
+    margin-left: 700px;
+    margin-bottom: 70px;
+    margin-top: 0cm;
+    padding: 20px;
+}
+
+#estudios{
+    text-align: center;
+    border: solid rgb(150, 42, 42);
+    background-color: rgb(196, 131, 35, 0.8);
+    font-size: 20px;
+    margin-right:200px ;
+    margin-left: 700px;
+    margin-bottom: 70px;
+    padding: 20px;
+}
+#experiencia{
+    text-align: center;
+    border: solid rgb(150, 42, 42);
+    background-color: rgb(196, 131, 35, 0.8);
+    font-size: 20px;
+    margin-right:200px ;
+    margin-left: 700px;
+    margin-bottom: 70px;
+    padding: 20px;
+}
+
+li{
+    background-color: rgb(204, 168, 115);
+    border: solid rgb(150, 42, 42, 0.8);
+    margin-bottom: 5px;
+    padding: 5px;
+
+}
+
+p{
+    background-color: rgb(204, 168, 115);
+    border: solid rgb(150, 42, 42, 0.8);
+    margin-bottom: 5px;
+    
+}
