@@ -12,6 +12,7 @@ body {
     margin: 10px;
     border: solid rgb(146, 146, 46);
     background-color: rgba(199, 199, 28, 0.8);
+    border-radius: 70px;
 }
 
 #datos{
@@ -19,9 +20,11 @@ body {
     border: solid rgb(150, 42, 42);
     background-color: rgba(207, 139, 38, 0.8);
     margin: 15px;
-    margin-right: 1350px ;
+    margin-right: 20px ;
     font-size: 20px;
     padding: 20px;
+    border-radius: 50px;
+    margin-left: 30px;
     
 }
 
@@ -30,9 +33,11 @@ body {
     border: solid rgb(150, 42, 42);
     background-color: rgb(196, 131, 35, 0.8);
     margin: 15px;
-    margin-right: 1350px ;
+    margin-right: 20px ;
     font-size: 20px;
     padding: 20px;
+    border-radius: 50px;
+    margin-left: 30px;
 }
 
 #idiomas{
@@ -40,20 +45,39 @@ body {
     border: solid rgb(150, 42, 42);
     background-color: rgb(196, 131, 35, 0.8);
     margin: 15px;
-    margin-right: 1350px ;
+    margin-right: 20px ;
     font-size: 20px;
-    padding: 20px;;
+    padding: 20px;
+    border-radius: 50px;
+    margin-left: 30px;
 }
+
+#hobbies{
+    text-align: left;
+    border: solid rgb(150, 42, 42);
+    background-color: rgb(196, 131, 35, 0.8);
+    margin: 15px;
+    padding: 10px;
+    margin-right: 20px ;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
 #highlights{
     text-align: left;
     border: solid rgb(150, 42, 42);
     background-color: rgb(196, 131, 35, 0.8);
     margin: 15px;
     padding: 10px;
-    margin-right: 1350px ;
+    margin-right: 20px ;
     font-size: 20px;
     padding: 20px;
-
+    border-radius: 50px;
+    margin-bottom: 20px;
+    margin-left: 30px;
 }
 
 
@@ -62,11 +86,13 @@ body {
     border: solid rgb(150, 42, 42);
     background-color: rgb(196, 131, 35, 0.8);
     font-size: 20px;
-    margin-right:200px ;
-    margin-left: 700px;
+    margin-right:50px ;
+    margin-left: 50px;
     margin-bottom: 70px;
-    margin-top: 0cm;
+    margin-top: 20px;
     padding: 20px;
+    border-radius: 50px;
+    border-radius: 50px;
     
     
 }
@@ -80,6 +106,9 @@ body {
     margin-left: 700px;
     margin-bottom: 70px;
     padding: 20px;
+    border-radius: 50px;
+    margin-right:50px ;
+    margin-left: 50px;
 }
 #experiencia{
     text-align: center;
@@ -90,19 +119,70 @@ body {
     margin-left: 700px;
     margin-bottom: 70px;
     padding: 20px;
+    border-radius: 50px;
+    margin-right:50px ;
+    margin-left: 50px;
 }
 
 li{
     background-color: rgb(204, 168, 115);
     border: solid rgb(150, 42, 42, 0.8);
     margin-bottom: 5px;
-    padding: 5px;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: left;
 
 }
 
 p{
     background-color: rgb(204, 168, 115);
     border: solid rgb(150, 42, 42, 0.8);
+    margin-bottom: 20px;
+    border-radius: 50px;
+    
+    
+}
+
+.izquierda{
+    border-top: 25px;
+    float: left; /* concentra bloque a la izq*/
+    text-align: center;
+    width: 35%;
+    border-radius: 70px;
+    background-color: rgba(228, 175, 0, 0.45);
+    border: solid rgb(150, 42, 42, 0.8);
+    
+  }
+
+.derecha{
+    border-top: 25px;
+    float: right; /* concentra bloque a la derecha*/
+    text-align: center;
+    width: 62%;
+    border-radius: 70px;
+    background-color: rgba(228, 175, 0, 0.45);
+    border: solid rgb(150, 42, 42, 0.8);
+   
+  }
+
+  #cv{
+    margin-left: 70px;
+    text-align: left;
+    margin-top: 20px;
+    
+  }
+
+#borde{
+    border-radius: 50px;
+
+}
+
+#video{
+    margin-left: 25px;
+}
+
+#gif{
+    margin-left: 35px;
     margin-bottom: 5px;
     
 }
