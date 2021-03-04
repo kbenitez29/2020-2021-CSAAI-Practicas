@@ -22,6 +22,7 @@ body {
     margin-right: 1350px ;
     font-size: 20px;
     padding: 20px;
+    
 }
 
 #habilidades{
@@ -55,17 +56,6 @@ body {
 
 }
 
-#video{
-    text-align: left;
-    border: solid rgb(150, 42, 42);
-    background-color: rgb(196, 131, 35, 0.8);
-    margin: 15px;
-    padding: 10px;
-    margin-right: 1350px ;
-    font-size: 20px;
-    padding: 20px;
-}
-
 
 #perfil{
     text-align: center;
@@ -77,6 +67,8 @@ body {
     margin-bottom: 70px;
     margin-top: 0cm;
     padding: 20px;
+    
+    
 }
 
 #estudios{
