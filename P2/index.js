@@ -23,7 +23,6 @@ const ESTADO = {
 //-- Por defecto su valor será el del estado inicial
 let estado = ESTADO.INIT;
 
-
 //-- Función de retrollamada de los botones
 //-- botones de la clase dígito
 function digit(dig)
@@ -45,7 +44,6 @@ function digit(dig)
   } 
 }
   
-
 for (let number of numbers) {
   //-- El parámetro ev.target contiene el boton
   //-- que ha recibido el click
@@ -79,6 +77,16 @@ del.onclick = () =>{
   display.innerHTML = display.innerHTML.slice(0,-1) // Slice coge elemento inicial y final a extraer en pantalla
 }
 
+dots.onclick = () => {
+  display.innerHTML += ".";
+
+}
+
+//-- Raiz cuadrada definicion
+sqrt.onclick = () => {
+  display.innerHTML = Math.sqrt(display.innerHTML);
+}
+
 //-- Evaluar la expresion
 equal.onclick = () => {
   if(estado == ESTADO.OP2){
@@ -88,14 +96,3 @@ equal.onclick = () => {
     console.log("Estado: " + estado);
   }
 }
-
-//-- Raiz cuadrada definicion
-sqrt.onclick = () => {
-  display.innerHTML = Math.sqrt(display.innerHTML);
-}
-
-dots.onclick = () => {
-  display.innerHTML += ".";
-}
-
-//Mejorar el codigo
