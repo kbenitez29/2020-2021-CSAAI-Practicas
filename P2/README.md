@@ -1,1 +1,4 @@
  # Práctica 2
+Calculadora programada utilizando una máquina de estados que impide introducir expresiones erróneas y solo permite introducir la estructura <Número> <Operador> <Número>.
+Presenta los números del 0 al 9, teclas CE (borrar el último digito), AC (borra todo el contenido y vuelve al estado inicial), la coma (.), el igual (=) y las operaciones básicas (suma, resta, multiplicación y división).
+Además como funcionalidad extra permite calcular operaciones exponenciales y raices cuadradas (se calcula sin necesidad de presionar el =, simplemente se introduce el numero deseado y la tecla √ para calcularla)
