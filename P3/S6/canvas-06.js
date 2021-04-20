@@ -12,7 +12,7 @@ const ctx = canvas.getContext("2d");
 //-- Texto solido
 ctx.font = "25px Arial";
 ctx.fillStyle = 'red'
-ctx.fillText("Texo sólido", 15, 50);
+ctx.fillText("Texo sólido", 50, 50);
 
 //-- Texto trazo
 ctx.strokeStyle = 'blue';

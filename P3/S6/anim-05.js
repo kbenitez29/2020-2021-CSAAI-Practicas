@@ -15,7 +15,7 @@ let y = 10;
 
 //-- Velocidades del objeto
 let velx = 3;
-let vely = 0.2;
+let vely = 5;
 
 //-- Funcion principal de animacion
 function update() 
