@@ -1,0 +1,31 @@
+@font-face{
+    font-family: "Azonix";
+    src: url(Azonix-1VB0.otf);
+}
+
+/* Fondo de la página */
+body {
+    background-image: url("retro.jpg"); 
+}
+
+/* Estilo para el canvas: Negro */
+#canvas {
+  background-color: black;
+  margin-left: 200px;
+}
+
+p{
+    margin-left: 380px;
+    font-family: "Azonix";
+    color: azure;
+}
+#inst{
+    margin-left: 270px;
+    font-family: "Azonix";
+    color: azure;
+}
+h1{
+    margin-left: 400px;
+    font-family: "Azonix";
+    color: azure;
+}
