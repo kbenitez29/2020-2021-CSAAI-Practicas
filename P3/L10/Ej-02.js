@@ -1,18 +1,18 @@
 const canvas = document.getElementById("canvas");
 
-canvas.width = 8000;
-canvas.height = 6000;
+canvas.width = 300;
+canvas.height = 100;
 
 const ctx = canvas.getContext("2d");
 
 //-- Constantes de los ladrillos
 const LADRILLO = {
-    F: 5,  // Filas
-    C: 9,  // Columnas
+    F: 2,  // Filas
+    C:2,  // Columnas
     w: 30,
     h: 20,
-    origen_x: 100,
-    origen_y: 100,
+    origen_x: 0,
+    origen_y: 0,
     padding: 5,
     visible: true
 };
@@ -34,7 +34,7 @@ for (let i = 0; i < LADRILLO.F; i++) {
     }
 }
 
-ladrillos[0][0].visible = true;
+ladrillos[1][1].visible = false;
 
 
 //-- Dibujar ladrillos
