@@ -2,8 +2,9 @@ console.log("Ejecutando JS...");
 
 
 const canvas = document.getElementById("canvas");
-const lives = document.getElementById("lives");
+/* const lives = document.getElementById("lives");
 const points = document.getElementById("points");
+ */
 
 //-- Definir el tamaño del canvas
 canvas.width = 600;
@@ -65,11 +66,39 @@ const raqueta = new racket(ctx);
 //-- Funcion de retrollamada de tecla pulsada
 window.onkeydown = (e) => {
   
-  //-- Comprobar si la tecla es un espacio
-    if (e.key == ' ') {
-      update();
+    if (e.keyCode == 39) {
+      if(raqueta.x >= 518){
+        raqueta.vel = 0;
+        console.log(x);
+      }else{
+        raqueta.vel = raqueta.inVel*1; 
+        console.log("Derecha");
+      }
+    }else if (e.keyCode == 37) {
+      if(raqueta.x<=0){
+        raqueta.vel = 0;
+      }else{
+        raqueta.vel = raqueta.inVel * -1; 
+        console.log("Izquierda");
+      }
+    }else if (e.keyCode == 32){
+      // Pelota en su posicion inicial
+      pelota.vx = pelota.inVX;
+      pelota.vy = pelota.inVY;
+
+      }  
     }
-  }
+   
+
+//-- Deteccion de liberacion de tecla
+window.onkeyup = (e) => {
+    if (e.keyCode == 37 || e.keyCode == 39){
+
+      //-- Velocidad de la raqueta a 0
+      raqueta.vel = 0;
+    }
+  
+} 
 
 // Pintar elementos
 function draw() {
@@ -79,18 +108,16 @@ function draw() {
   raqueta.draw();
 
   // Marcador de puntos y vidas
-  ctx.beginPath();
+  
     ctx.font = "20px Azonix";
-    ctx.fillStyle = 'white'
+    ctx.fillStyle = 'white';
     ctx.fillText("Lives", 480, 30);
     ctx.fillText(nLives, 500, 55); 
   
-  ctx.beginPath();
     ctx.font = "20px Azonix";
-    ctx.fillStyle = 'white'
+    ctx.fillStyle = 'white';
     ctx.fillText("Points", 55, 30);
     ctx.fillText(nPoints, 80, 55);
-
 
   //-- Dibujar ladrillos
   for (let i = 0; i < LADRILLO.F; i++) {
@@ -105,18 +132,56 @@ function draw() {
       }
     }
   }
-  ctx.closePath();
+  
 }
-
-
 
 // Actualiza los elementos
 function update(){
 
-  pelota.update();
   raqueta.update();
+  
+  // Condicion de rebote en extremos verticales del canvas
+  if (pelota.x < 10 || pelota.x >= (canvas.width - 10) ) {
+    pelota.vx = pelota.vx * -1;
+  }
 
+  // Condición de rebote en extremos horizontales del canvas
+  if (pelota.y <= 10 ) {
+    pelota.vy = pelota.vy * -1;
+  }
 
+  //-- Pelota llega a limite inferior
+  if (pelota.y >= canvas.height) {
+    pelota.vx = 0;
+    pelota.vy = 0;
+    pelota.x = pelota.inX;
+    pelota.y = pelota.inY;
+    raqueta.x = raqueta.inX
+    nLives = nLives - 1;
+    if (nLives==0){
+      pelota.vx = 0;
+      pelota.vy = 0;
+      console.log('Has perdido');
+      over.innerHTML = "Game over";
+      re.innerHTML = 'Recarga la página para volver a jugar'
+      // falta hacer que se reinicie
+    }
+  }  
+
+  //-- Colision con la raqueta
+  if (pelota.x >= raqueta.x && pelota.x <=(raqueta.x + raqueta.width) &&
+    pelota.y >= raqueta.y && pelota.y <=(raqueta.y + raqueta.height)) {
+    pelota.vy = pelota.vy * -1;
+    pelota.vx = pelota.vy;
+  }
+
+ 
+
+  // Actualizar la posición
+  /* x = x + velx;
+  y = y + vely; */
+
+  pelota.update();
   //Borrar canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 

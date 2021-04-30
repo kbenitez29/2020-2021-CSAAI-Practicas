@@ -9,13 +9,13 @@ class racket
     this.height = 13;
 
     // Posicion partida
-    this.inX = 265;
+    this.inX = 262;
     this.inY = 732;
 
-    // velocidad movimiento
+    // velocidad movimiento de raqueta
     this.inVel = 5;
 
-    // Velocidad 
+    // Velocidad inicial 
     this.vel = 0;
 
     // Inicializar 
@@ -32,7 +32,7 @@ class racket
   // Actualiza
   update()
   {
-    this.y += this.vel;
+    this.x += this.vel;
   }
 
   // Dibuja el objeto
@@ -45,5 +45,6 @@ class racket
     this.ctx.rect(this.x, this.y, this.width, this.height);
 
     this.ctx.fill();
+    this.ctx.closePath();
   }
 }

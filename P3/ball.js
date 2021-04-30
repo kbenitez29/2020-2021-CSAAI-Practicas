@@ -15,7 +15,7 @@ class ball
       this.y = 0;
   
       // Velocidad inicial de la bola
-      this.inVX = 3;
+      this.inVX = 5;
       this.inVY = 5;
   
       // Velocidad bola
@@ -49,6 +49,7 @@ class ball
       this.ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
       // this.ctx.rect(this.x, this.y, this.size, this.size);
       this.ctx.fill();
+      this.ctx.closePath();
     }
   
   
