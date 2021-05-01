@@ -2,9 +2,13 @@ console.log("Ejecutando JS...");
 
 
 const canvas = document.getElementById("canvas");
-/* const lives = document.getElementById("lives");
-const points = document.getElementById("points");
- */
+
+//-- Definir sonidos
+const reboteSonido = new Audio('break-rebote.mp3');
+const vidaSonido = new Audio('break-vida.mp3');
+const raquetaSonido = new Audio('break-raqueta.mp3');
+const OverSonido = new Audio('game-over.mp3');
+const puntoSonido = new Audio('punto.mp3');
 
 //-- Definir el tamaño del canvas
 canvas.width = 600;
@@ -131,14 +135,20 @@ function update(){
 
   raqueta.update();
   
-  // Condicion de rebote en extremos verticales del canvas
+  // Condicion de rebote en extremos horizontales del canvas
   if (pelota.x < 10 || pelota.x >= (canvas.width - 10) ) {
     pelota.vx = pelota.vx * -1;
+
+    // Sonido de rebote
+    reboteSonido.play();
   }
 
-  // Condición de rebote en extremos horizontales del canvas
+  // Condición de rebote en extremo vertical del canvas
   if (pelota.y <= 10 ) {
     pelota.vy = pelota.vy * -1;
+
+    // Sonido de rebote
+    reboteSonido.play();
   }
 
   //-- Pelota llega a limite inferior
@@ -149,6 +159,9 @@ function update(){
     pelota.y = pelota.inY;
     raqueta.x = raqueta.inX;
 
+    // Sonido perdida de vida
+    vidaSonido.play();
+
     // Resta 1 vida cada vez que pierdes
     nLives = nLives - 1;
     if (nLives==0){
@@ -156,7 +169,10 @@ function update(){
       pelota.vy = 0;
       console.log('Has perdido');
       over.innerHTML = "Game over";
-      re.innerHTML = 'Recarga la página para volver a jugar'
+      re.innerHTML = 'Recarga la página para volver a jugar';
+
+      // Sonido de juego finalizado 
+      OverSonido.play();
     }
   }  
 
@@ -165,20 +181,26 @@ function update(){
     pelota.y >= raqueta.y && pelota.y <=(raqueta.y + raqueta.height)) {
     pelota.vy = pelota.vy * -1;
     pelota.vx = pelota.vy;
+
+    // Sonido de colision con raqueta
+    raquetaSonido.play();
   }
 
   //-- Colision con ladrillos
   for (let i = 0; i < LADRILLO.F; i++) {
     for (let j = 0; j < LADRILLO.C; j++) {
       if (ladrillos[i][j].visible) {
-        if ((pelota.y >= ladrillos[i][j].y) && (pelota.y <= (ladrillos[i][j].y + 50))){
-          if ((pelota.x >= ladrillos[i][j].x) && (pelota.x<= (ladrillos[i][j].x + 50))){
+        if ((pelota.y >= ladrillos[i][j].y) && (pelota.y <= (ladrillos[i][j].y + 40))){
+          if ((pelota.x >= ladrillos[i][j].x) && (pelota.x<= (ladrillos[i][j].x + 40))){
             ladrillos[i][j].visible = false;
             pelota.vy = pelota.vy * -1;
             pelota.vx = pelota.vy;
 
             // Suma de puntuacion en funcion de bloques rotos
             nPoints = nPoints + 1;
+
+            // Sonido de suma de punto
+            puntoSonido.play();
 
           }
         }
