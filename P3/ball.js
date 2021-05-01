@@ -47,7 +47,6 @@ class ball
   
       // Bola
       this.ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-      // this.ctx.rect(this.x, this.y, this.size, this.size);
       this.ctx.fill();
       this.ctx.closePath();
     }

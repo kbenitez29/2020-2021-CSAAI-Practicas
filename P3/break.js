@@ -13,14 +13,6 @@ canvas.height = 790;
 // Obtener el contexto del canvas
 const ctx = canvas.getContext("2d");
 
-// Coordenadas del objeto
-let x = 0;
-let y = 10;
-
-// Velocidades del objeto
-let velx = 3;
-let vely = 1;
-
 // Puntuación
 let nPoints = 0;
 
@@ -108,7 +100,6 @@ function draw() {
   raqueta.draw();
 
   // Marcador de puntos y vidas
-  
     ctx.font = "20px Azonix";
     ctx.fillStyle = 'white';
     ctx.fillText("Lives", 480, 30);
@@ -156,7 +147,9 @@ function update(){
     pelota.vy = 0;
     pelota.x = pelota.inX;
     pelota.y = pelota.inY;
-    raqueta.x = raqueta.inX
+    raqueta.x = raqueta.inX;
+
+    // Resta 1 vida cada vez que pierdes
     nLives = nLives - 1;
     if (nLives==0){
       pelota.vx = 0;
@@ -164,7 +157,6 @@ function update(){
       console.log('Has perdido');
       over.innerHTML = "Game over";
       re.innerHTML = 'Recarga la página para volver a jugar'
-      // falta hacer que se reinicie
     }
   }  
 
@@ -175,13 +167,27 @@ function update(){
     pelota.vx = pelota.vy;
   }
 
- 
+  //-- Colision con ladrillos
+  for (let i = 0; i < LADRILLO.F; i++) {
+    for (let j = 0; j < LADRILLO.C; j++) {
+      if (ladrillos[i][j].visible) {
+        if ((pelota.y >= ladrillos[i][j].y) && (pelota.y <= (ladrillos[i][j].y + 50))){
+          if ((pelota.x >= ladrillos[i][j].x) && (pelota.x<= (ladrillos[i][j].x + 50))){
+            ladrillos[i][j].visible = false;
+            pelota.vy = pelota.vy * -1;
+            pelota.vx = pelota.vy;
 
-  // Actualizar la posición
-  /* x = x + velx;
-  y = y + vely; */
+            // Suma de puntuacion en funcion de bloques rotos
+            nPoints = nPoints + 1;
+
+          }
+        }
+      }
+    }
+  }
 
   pelota.update();
+  
   //Borrar canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 

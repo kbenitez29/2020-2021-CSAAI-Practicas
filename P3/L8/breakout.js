@@ -22,7 +22,6 @@ ctx.beginPath();
     ctx.fill();
 
 
-
     //-- Dibujar un circulo: coordenadas x,y del centro
     //-- Radio, Angulo inicial y angulo final
     ctx.arc(320, 730, 5, 0, 2 * Math.PI);
