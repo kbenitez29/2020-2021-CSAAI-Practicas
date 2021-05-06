@@ -1,0 +1,16 @@
+@font-face{
+    font-family: "Azonix";
+    src: url(Azonix-1VB0.otf);
+}
+
+#imagesrc {
+    display:none;
+}
+
+body {
+    background-color: grey;
+}
+
+p{
+    font-family: 'Azonix';
+}
