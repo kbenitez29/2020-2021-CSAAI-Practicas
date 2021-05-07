@@ -3,14 +3,106 @@
     src: url(Azonix-1VB0.otf);
 }
 
-#imagesrc {
-    display:none;
-}
-
 body {
-    background-color: grey;
+    background-color: rgb(126, 111, 111);
+    text-align: center;
 }
 
 p{
     font-family: 'Azonix';
+    padding-top: 15px;
+    
+}
+
+
+h1{
+    font-family: 'Azonix';
+    size: 30px;
+    padding-left: 100px;
+    text-shadow:2px 2px rgb(85, 82, 82);
+
+}
+
+h2{
+    font-family: 'Azonix';
+    size: 50px;
+    border: solid rgb(146, 146, 46);
+    background-color: rgba(179, 179, 46, 0.8);
+    border-radius: 70px;
+    text-shadow:2px 2px rgb(85, 82, 82);
+}
+
+
+
+#gray{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;   
+    font-size: 25px;
+    text-shadow:2px 2px rgb(85, 82, 82);
+}
+
+#inversion{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;   
+    font-size: 25px;
+    text-shadow:2px 2px rgb(85, 82, 82);
+}
+
+#especular{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;   
+    font-size: 25px;
+    text-shadow:2px 2px rgb(85, 82, 82);
+}
+
+#ruido{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;   
+    font-size: 25px;
+    text-shadow:2px 2px rgb(85, 82, 82);
+}
+
+#color{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;   
+    font-size: 25px;
+    text-shadow:2px 2px rgb(85, 82, 82);
+}
+
+
+table {
+    font-family: 'Azonix';
+    text-align: center;
+    width: 88%;
+    
+}
+  
+th {
+    font-family: 'Azonix';
+    font-size: 25px;
+    padding-left: 100px;
+    text-align: right;
+    padding-top: 16px;
+    text-shadow:2px 2px rgb(85, 82, 82);
+}
+  
+td{
+    font-family: 'Azonix';
+    text-align: right;
+    border-radius: 40px;
+}
+
+tr{
+    font-family: 'Azonix';
+    padding-right: 500px;
 }

@@ -9,16 +9,59 @@
     <title>Filtros</title>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
-    <img src="cat.jpg" id="imagesrc">
-    <p>Rojo</p>
-    <input type="range" id="deslizador_red" min="0" max="255" value="255"/>
-    <p id="range_value_red"></p>
-    <p>Verde</p>
-    <input type="range" id="deslizador_green" min="0" max="255" value="255"/>
-    <p id="range_value_green"></p>
-    <p>Azul</p>
-    <input type="range" id="deslizador_blue" min="0" max="255" value="255"/>
-    <p id="range_value_blue"></p>
+    <table><h2>Procesado de imagen</h1>
+        <tr>
+            <th><h1>Imagen original</h1></th>
+            <th><h1>Imagen manipulada</h1></th>
+        </tr>
+
+        <tr>
+            <td><img src="cat.jpg" id="imagesrc"></td>
+            <td><canvas id="canvas"></canvas></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Color</th>
+            <th>Gris</th>
+            <th>Especular</th>
+            <th>Inversión</th>
+            <th>Ruido</th>
+        </tr>
+        <tr>
+            <th><button id='color'><img src="color.png" width="30px"></button></th>
+
+            <th><button id='gray'><img src="gray.png" width="30px"></button></th>
+            
+            <th><button id='especular'><img src="especular.png" width="30px"></button></th>
+            
+            <th><button id='inversion'><img src="inverted.png" width="30px"></button></th>
+        
+            <th><button id='ruido'><img src="noise.png" width="30px"></button></th>
+        </tr>
+    </table>
+    <table id="sliders">
+        <tr>
+            <th>Rojo</th>
+            <th>Verde</th>
+            <th>Azul</th>       
+        </tr>
+        <tr>
+            <th><input type="range" id="deslizador_red" min="0" max="255" value="255"/></th>
+            <th><input type="range" id="deslizador_green" min="0" max="255" value="255"/></th>
+            <th><input type="range" id="deslizador_blue" min="0" max="255" value="255"/></th>
+            
+        </tr>
+        <tr>
+            <th><p id="range_value_red">0</p></th>
+            <th><p id="range_value_green">0</p></th>
+            <th><p id="range_value_blue">0</p></th>
+        </tr>
+    </table>
+
+    
+
+ 
 </body>
 </html>

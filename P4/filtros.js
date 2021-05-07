@@ -1,4 +1,5 @@
 console.log("Ejecutando JS....")
+// METER IMAGENES EN BOTONES Y DESLIZADORES Y AÑADIR FUNCIONALIDADES EXTRA
 
 //-- Obtener elementos del DOM
 const canvas = document.getElementById('canvas');
@@ -15,10 +16,13 @@ const range_value_red = document.getElementById('range_value_red');
 const range_value_green = document.getElementById('range_value_green');
 const range_value_blue = document.getElementById('range_value_blue');
 
+//-- Acceso a botones
+const gray = document.getElementById('gray');
+const especular = document.getElementById('especular');
+const inversion = document.getElementById('inversion');
+const ruido = document.getElementById('ruido');
+const color = document.getElementById('color');
 //-- Función de retrollamada de imagen cargada
-//-- La imagen no se carga instantaneamente, sino que
-//-- lleva un tiempo. Sólo podemos acceder a ella una vez
-//-- que esté totalmente cargada
 img.onload = function () {
 
   //-- Se establece como tamaño del canvas el mismo
@@ -27,7 +31,6 @@ img.onload = function () {
   canvas.height = img.height;
 
   //-- Situar la imagen original en el canvas
-  //-- No se han hecho manipulaciones todavia
   ctx.drawImage(img, 0,0);
 
   console.log("Imagen lista...");
@@ -40,7 +43,6 @@ deslizador_red.oninput = () => {
   range_value_red.innerHTML = deslizador_red.value;
 
   //-- Situar la imagen original en el canvas
-  //-- No se han hecho manipulaciones todavia
   ctx.drawImage(img, 0,0);
 
   //-- Obtener la imagen del canvas en pixeles
@@ -60,6 +62,7 @@ deslizador_red.oninput = () => {
 
   //-- Poner la imagen modificada en el canvas
   ctx.putImageData(imgData, 0, 0);
+  console.log('Red');
 }
 
 deslizador_green.oninput = () => {
@@ -67,7 +70,6 @@ deslizador_green.oninput = () => {
     range_value_green.innerHTML = deslizador_green.value;
   
     //-- Situar la imagen original en el canvas
-    //-- No se han hecho manipulaciones todavia
     ctx.drawImage(img, 0,0);
   
     //-- Obtener la imagen del canvas en pixeles
@@ -87,6 +89,7 @@ deslizador_green.oninput = () => {
   
     //-- Poner la imagen modificada en el canvas
     ctx.putImageData(imgData, 0, 0);
+    console.log('Green');
   }
 
   deslizador_blue.oninput = () => {
@@ -94,7 +97,6 @@ deslizador_green.oninput = () => {
     range_value_blue.innerHTML = deslizador_blue.value;
   
     //-- Situar la imagen original en el canvas
-    //-- No se han hecho manipulaciones todavia
     ctx.drawImage(img, 0,0);
   
     //-- Obtener la imagen del canvas en pixeles
@@ -114,5 +116,64 @@ deslizador_green.oninput = () => {
   
     //-- Poner la imagen modificada en el canvas
     ctx.putImageData(imgData, 0, 0);
+    console.log('Azul');
   }
+
+  // Funcion boton de grises
+  gray.onclick = () => {
+    var brillo = 0;
+    let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    let data = imgData.data;
+    for (var i = 0; i < data.length; i+=4) {
+      brillo = (3 * data[i] + 4 * data[i+1] + data[i+2])/8
+      data[i] = brillo;
+      data[i+1] = brillo;
+      data[i+2] = brillo;
+    }
+    ctx.putImageData(imgData, 0, 0);
+    console.log('Gris');
+  }
+
+  // Funcion boton de giro vertical
+  especular.onclick = () => {
+
+    ctx.translate(img.width,0);
+    ctx.scale(-1,1);
+    ctx.drawImage(img, 0, 0);
+    ctx.putImageData(imgData, 0, 0);
+    console.log('Especular');
+  }
+
+  // Funcion boton de giro horizontal
+  inversion.onclick =()=>{
+   
+    ctx.drawImage(img, 0,0);
+    ctx.translate(0,2*(img.height)/2);
+    ctx.scale(1,-1);
+    ctx.drawImage(img, 0,0);
+    ctx.putImageData(imgData, 0, 0);
+    console.log('Inversion');
+  }
+
+  // Funcion boton de ruido
+  ruido.onclick = () =>{
+    
+    ctx.drawImage(img, 0,0);
+    let imgData = ctx.getImageData(0,0,canvas.width, canvas.height);
+    let data = imgData.data;
+      for (let i = 0; i < data.length; i+=4) {
+         let aleat = (Math.random() * 100);
+         data[i] = data[i]+aleat;
+         data[i+1] = data[i+1]+aleat;
+         data[i+2] = data[i+2]+aleat;
+      }
+      ctx.putImageData(imgData, 0, 0);
+  }
+
+  // Funcion de imagen a color
+    color.onclick = () => {
+        ctx.drawImage(img, 0,0);
+        ctx.putImageData(imgData, 0, 0);
+    }
+
 console.log("Fin...");
