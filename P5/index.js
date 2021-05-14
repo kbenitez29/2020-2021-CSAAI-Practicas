@@ -1,5 +1,4 @@
-// QUITAR 1 CAMARA , CREO QUE SOLO SE PONEN 2, NO 3
-
+//funcionalidad avanzada nueva camara
 
 //----- Obtener elemento de video y configurarlo
 let directo = document.getElementById("directo");
@@ -23,16 +22,16 @@ const btn_src_off = document.getElementById("btn_src_off");
 
 
 //-- Establecer las dimensiones de los vídeos
-directo.width=720;
-directo.height=300;
-video1.width=300;  
-video1.height=150;
+directo.width=800;
+directo.height=370;
+video1.width=350;  
+video1.height=300;
 
-video2.width=300;  
-video2.height=150;
+video2.width=350;  
+video2.height=300;
 
-video3.width=300;  
-video3.height=150;
+video3.width=350;  
+video3.height=300;
 
 //-- Imagen de Test usada
 const TEST_IMAGE_URL = "test.png";
@@ -120,3 +119,8 @@ btn_video3.onclick = () => {
     directo.play();
     directo.poster=null;
 };
+
+//-- Boton de bucle
+
+
+//-- Boton de salida de bucle

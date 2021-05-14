@@ -1,0 +1,128 @@
+@font-face{
+    font-family: "Azonix";
+    src: url(Azonix-1VB0.otf);
+}
+
+h1{
+    font-family: 'Azonix';
+    font-size: 50px;
+    text-align: center;
+    text-shadow:2px 2px rgb(221, 218, 218);
+    color: white;
+
+}
+
+/* Fondo de la página */
+body {
+    background-image: url("Vigilancia.jpg"); 
+}
+
+#directo{
+    text-align: center;
+    margin-left: 550px;
+
+}
+
+#video1{
+    text-align: center;
+    margin-left: 350px;
+}
+
+#video2{
+    text-align: center;
+    margin-left: 70px;
+}
+
+#video3{
+    text-align: center;
+    margin-left: 70px;
+}
+
+#btn_video1{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 80px;
+    height: 50px;   
+    font-size: 10px;
+    text-shadow:1px 1px rgb(56, 54, 54);
+    margin-left: 70px;
+}
+
+#btn_video1{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;   
+    font-size: 15px;
+    text-shadow:1px 1px rgb(56, 54, 54);
+    margin-left: 470px;
+}
+#btn_video2{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;   
+    font-size: 15px;
+    text-shadow:1px 1px rgb(56, 54, 54);
+    margin-left: 330px;
+}
+
+#btn_video3{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;   
+    font-size: 15px;
+    text-shadow:1px 1px rgb(56, 54, 54);
+    margin-left: 350px;
+}
+
+#btn_test{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;   
+    font-size: 15px;
+    text-shadow:1px 1px rgb(56, 54, 54);
+    margin-left: 180px;
+}
+
+#btn_src_on{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 115px;
+    height: 50px;   
+    font-size: 12px;
+    text-shadow:1px 1px rgb(56, 54, 54);
+    margin-left: 280px;
+}
+
+#btn_src_off{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 115px;
+    height: 50px;   
+    font-size: 12px;
+    text-shadow:1px 1px rgb(56, 54, 54);
+    margin-left: 330px;
+}
+
+#btn_loop_off{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 115px;
+    height: 50px;   
+    font-size: 12px;
+    text-shadow:1px 1px rgb(56, 54, 54);
+    margin-left: 235px;
+}
+
+#btn_loop_on{
+    font-family: 'Azonix';
+    border-radius: 10px;
+    width: 115px;
+    height: 50px;   
+    font-size: 12px;
+    text-shadow:1px 1px rgb(56, 54, 54);
+    margin-left: 290px;
+}
