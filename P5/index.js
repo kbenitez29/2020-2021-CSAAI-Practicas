@@ -1,4 +1,3 @@
-//funcionalidad avanzada nueva camara
 
 //----- Obtener elemento de video y configurarlo
 let directo = document.getElementById("directo");
@@ -20,6 +19,14 @@ const btn_test = document.getElementById("btn_test");
 const btn_src_on = document.getElementById("btn_src_on");
 const btn_src_off = document.getElementById("btn_src_off");
 
+// Botones de bucle
+const btn_bucle_on = document.getElementById("btn_loop_on");
+const btn_bucle_off = document.getElementById("btn_loop_off");
+
+//-- Variables del bucle
+var bucle = false;
+const begin = 0;
+const finish = begin + 2;
 
 //-- Establecer las dimensiones de los vídeos
 directo.width=800;
@@ -69,6 +76,29 @@ btn_src_on.onclick = () => {
     directo.poster = TEST_IMAGE_URL;
 };
 
+// Activacion de bucle
+btn_bucle_on.onclick = () => {
+    directo.currentTime = begin;
+    bucle = true;
+    console.log('Bucle ON');
+  }
+
+
+// Intervalo de repeticion
+setInterval(()=>{
+    if(bucle){
+      if (directo.currentTime > finish){
+          directo.currentTime = begin;
+      }
+    }
+  },20);
+
+// Desactivacion de bucle
+btn_bucle_off.onclick = () => {
+    console.log('Bucle OFF');
+    bucle = false;
+}
+ 
 //-- Boton de FUENTES-OFF
 btn_src_off.onclick = () => {
 
@@ -120,7 +150,3 @@ btn_video3.onclick = () => {
     directo.poster=null;
 };
 
-//-- Boton de bucle
-
-
-//-- Boton de salida de bucle

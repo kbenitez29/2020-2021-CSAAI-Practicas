@@ -1,1 +1,3 @@
  # Práctica 5
+Aplicacion web que monitorea videos, consta de 3 fuentes de video (se añade 1), botones de activación y desactivacion de las mismas y botones de activación y desactivación del modo bucle en las fuentes.
+Como funcionalidad extra se añade el modo reproducción en bucle en el que se selecciona una fuente y se reproducen los 2 primeros segundos todo el tiempo. Para salir del modo se debe pulsar el boton de "Bucle OFF".
